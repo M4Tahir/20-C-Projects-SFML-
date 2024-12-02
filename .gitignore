@@ -1,0 +1,66 @@
+# IDE-specific folders
+/.vs/                        # Visual Studio
+/.idea/                      # CLion and JetBrains IDEs
+/_ReSharper.Caches           # ReSharper
+
+# Build folders
+/cmake-build-debug/
+cmake-build-release/
+cmake-build-*/               # Other build configurations
+build/
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# User-specific files
+*.user                       # Visual Studio user settings
+*.vcxproj.user               # Visual Studio project-specific settings
+*.suo                        # Solution User Options
+*.sln.docstates              # Solution documents states
+
+# Compiled object files
+*.o
+*.obj
+
+# Precompiled headers
+*.gch
+*.pch
+
+# Static libraries
+*.lib
+*.a
+
+# Dynamic libraries
+*.dll
+*.so
+*.dylib
+
+# Executable files
+*.exe
+*.out
+*.app
+
+# Debug logs
+*.log
+*.log.*
+*.tlog
+
+# Temporary files
+*.tmp
+
+# IDE workspace files
+*.code-workspace             # Visual Studio Code workspace files
+
+# Build directories
+Debug/
+Release/
+x64/
+x86/
+ipch/
+.vscode/
+/_ReSharper.Caches/
+/.vs
+/.idea
