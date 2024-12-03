@@ -30,13 +30,13 @@ Makefile
 *.pch
 
 # Static libraries
-*.lib
-*.a
+# *.lib
+# *.a
 
 # Dynamic libraries
-*.dll
-*.so
-*.dylib
+# *.dll
+# *.so
+# *.dylib
 
 # Executable files
 *.exe
