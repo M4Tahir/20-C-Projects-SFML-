@@ -52,10 +52,15 @@ list(APPEND EXTRA_LIBRARIES
 add_definitions(-DSFML_STATIC)
 
 # Recursively add all .cpp files in the src/ directory
-file(GLOB_RECURSE SOURCES "src/*.cpp")
+# file(GLOB_RECURSE SOURCES "src/*.cpp")
+
 
 # Create executable target
-add_executable(20___C___Projects__SFML_ ${SOURCES})
+# add_executable(20___C___Projects__SFML_ ${SOURCES})
+
+
+add_executable(20___C___Projects__SFML_ "src/02 - Bouncing Ball/BounceBall.cpp" )
+
 
 # Link SFML and additional libraries
 target_link_libraries(20___C___Projects__SFML_ ${SFML_LIBRARIES} ${EXTRA_LIBRARIES})
@@ -69,4 +74,7 @@ endif()
 if(MSVC)
     set_target_properties(20___C___Projects__SFML_ PROPERTIES
         MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+    # Set CWD for Visual Studio
+    set_property(TARGET 20___C___Projects__SFML_ PROPERTY VS_DEBUGGER_WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}")
+
 endif()

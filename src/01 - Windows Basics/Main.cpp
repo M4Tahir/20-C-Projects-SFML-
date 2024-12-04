@@ -1,3 +1,5 @@
+
+#include <filesystem>
 #include<iostream>
 #include "SFML/Graphics.hpp"
 #include"SFML/Graphics/Drawable.hpp"
@@ -53,7 +55,7 @@ private:
 
 };
 
-int main()
+int main1()
 {
 	sf::RenderWindow window;
 	window.create(sf::VideoMode(720, 480), "Windows Basics");
@@ -66,8 +68,13 @@ int main()
 	circle.setPosition(width / 2, height / 2);
 	circle.setFillColor(sf::Color::Red);
 
+
+	auto exePath = std::filesystem::current_path();
+	std::cout << exePath << "\n";
+	std::cout << "Current working directory: " << std::filesystem::current_path() << std::endl;
+
 	sf::Font font;
-	if (font.loadFromFile("../Poppins-Regular.ttf"))
+	if (!font.loadFromFile("../../../res/Poppins-Regular.ttf"))
 		return EXIT_FAILURE;
 
 	// Text
@@ -110,13 +117,19 @@ int main()
 	Ball ball(20);
 	float acceleration = 1.f;
 
+	float fps = 0;
+
 	while (window.isOpen())
 	{
 		sf::Event event;
 
 		// let reset the clock each time and get time it takes to run and print it.
 		float dt = clock.restart().asSeconds();
-		std::cout << "FPS: " << 1.0f / dt << "\n";
+		fps += 1;
+		if (fps > 30) {
+			std::cout << "FPS: " << 1.0f / dt << "\n";
+			fps = 0;
+		}
 
 		while (window.pollEvent(event))
 		{
