@@ -59,7 +59,8 @@ add_definitions(-DSFML_STATIC)
 # add_executable(20___C___Projects__SFML_ ${SOURCES})
 
 
-add_executable(20___C___Projects__SFML_ "src/02 - Bouncing Ball/BounceBall.cpp" )
+# add_executable(20___C___Projects__SFML_ "src/02 - Bouncing Ball/BounceBall.cpp" )
+ add_executable(20___C___Projects__SFML_ "src/03 - Paddle and Ball/Main.cpp")
 
 
 # Link SFML and additional libraries

@@ -63,8 +63,8 @@ static void increaseVelocity(Ball& ball, const float dt)
 		return;
 
 	float acceleration = 10.f;
-	vx += (vx > 0.f ? 1.f : -1.f) + acceleration * dt;
-	vy += (vy > 0.f ? 1.f : -1.f) + acceleration * dt;
+	vx += (vx > 0.f ? 1.f : -1.f) * acceleration * dt;
+	vy += (vy > 0.f ? 1.f : -1.f) * acceleration * dt;
 	ball.setVelocity({ vx,vy });
 }
 
