@@ -62,7 +62,7 @@ private:
 	int dirY = rand() % 2 == 0 ? 1 : -1;
 	sf::Vector2f m_Velocity{ static_cast<float>(50 * dirX),static_cast<float>(20 * dirY) };
 	sf::Vector2u m_WinDim;
-};
+}
 
 class GameLogic
 {
@@ -141,6 +141,7 @@ int main()
 		sf::Vertex({0,static_cast<float>(winSize.y) / 2}),
 		sf::Vertex({static_cast<float>(winSize.x),static_cast<float>(winSize.y) / 2}),
 	};
+	std::cout << "";
 
 	sf::Clock clock;
 
