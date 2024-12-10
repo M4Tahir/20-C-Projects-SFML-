@@ -61,7 +61,8 @@ add_definitions(-DSFML_STATIC)
 
 # add_executable(20___C___Projects__SFML_ "src/02 - Bouncing Ball/BounceBall.cpp" )
 # add_executable(20___C___Projects__SFML_ "src/03 - Paddle and Ball/Main.cpp")
- add_executable(20___C___Projects__SFML_  "src/04 -  Click the Shape/Main.cpp")
+ # add_executable(20___C___Projects__SFML_  "src/04 -  Click the Shape/Main.cp")
+ add_executable(20___C___Projects__SFML_  "src/05 - Image Viewer/Main.cpp")
 
 
 # Link SFML and additional libraries
